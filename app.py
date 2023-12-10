@@ -58,7 +58,7 @@ def get_titles_by_keyword(keyword):
 
 
 
-@app.route('/studios/<int:animation_id>', methods=['PUT', 'GET'])
+@app.route('/studios/<int:animation_id>', methods=['PUT'])
 def update_studio(animation_id):
     new_studio = request.args.get('studio')
     animation = next((a for a in animations if a['ID'] == animation_id), None)
